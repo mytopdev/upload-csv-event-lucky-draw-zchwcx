@@ -1,0 +1,34 @@
+<div class="row" *ngIf="hasAnimationStarted">
+    <div class="col text-center">
+
+        <h1 [countUp]="endVal" [options]="options" (complete)="doSomethingOnComplete()" ></h1>
+        <div *ngIf="hasAnimationCompleted">
+
+            <div class="col text-center">
+                <div class="container">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Congratulation to <span
+            *ngIf="staffName">{{ staffName }}</span>
+          </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+  <div class="col text-center">
+    <img src="https://i.imgur.com/nLbKwz6.png" class="img-fluid">
+  </div>
+</div>
+
+<div class="fixed-bottom">
+    <button (click)="start()" type="button" mat-raised-button block color="primary" class="w-100">
+        START
+    </button>
+</div>

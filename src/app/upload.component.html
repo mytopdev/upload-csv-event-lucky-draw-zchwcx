@@ -1,0 +1,25 @@
+<p>Please upload participants.csv containing 3 columns of data in the following order:
+</p>
+<ol>
+	<li>Staff ID (number)</li>
+  <li>Staff Name (text)</li>
+  <li>Staff Chances (number)</li>
+</ol>
+<p>Download this sample as reference via <strong>https://bit.ly/2lLAGm6</strong></p>
+<input type="file" #csvReader name="Upload CSV" id="txtFileUpload" (change)="uploadListener($event)" accept=".csv" />
+<!-- <table class="minimalistBlack" *ngIf="records.length > 0">
+  <thead>
+    <tr>
+      <th>ID </th>
+      <th>Name </th>
+      <th>Chances </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of records;let i = index;">
+      <td> <span>{{record.staffIdentifier}}</span> </td>
+      <td> <span>{{record.staffName}}</span> </td>
+      <td> <span>{{record.staffChances}}</span> </td>
+    </tr>
+  </tbody>
+</table> -->
